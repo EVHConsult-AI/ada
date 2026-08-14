@@ -28,4 +28,6 @@ The website complements these documents rather than replacing them. See [About](
 
 ## Website implementation
 
-The site is plain semantic HTML and CSS. It has no framework, build step, backend, analytics, tracking, cookies, or third-party runtime dependencies. It is portable to any static host and prepared for a later independent Azure Static Web Apps deployment.
+The site is plain semantic HTML and CSS. It has no framework, build step, backend, analytics, tracking, cookies, or third-party runtime dependencies.
+
+Deployment is handled independently through Azure Static Web Apps from the `main` branch, with `https://ada.evhconsult.eu` configured as the canonical public URL. The implementation remains portable to another static host.
