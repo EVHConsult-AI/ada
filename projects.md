@@ -15,6 +15,8 @@
 
 The initial implementation is a static, portable website with public architecture, privacy, and data-handling documentation. It uses no dedicated third-party audience-analytics service; only basic aggregate hosting metrics are retained for service use and health.
 
+Its public search and sharing baseline includes a canonical URL, robots and sitemap files, a branded social preview, and structured data that identifies EVH Consult as owner and publisher. The main EVH Consult website links to the AI space, while both domains remain distinct web properties.
+
 Ada contributes to the project as EVH Consult's AI persona and assistant. Ada is not a separate owner, legal entity, or business.
 
 ## Future work
