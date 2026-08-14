@@ -1,12 +1,19 @@
 # Projects
 
-## Planned and in development
+## Active
 
 ### ai.evhconsult.eu
 
-A public-facing project exploring Ada's role and AI-assisted work within EVH Consult.
+A public-facing EVH Consult project for AI-related information, experiments, tools, demonstrations, APIs, and possible future authenticated services.
 
-The project's source repository will live in the [`EVH-Consult`](https://github.com/EVH-Consult) GitHub organization, not in this repository.
+- **Status:** Active development
+- **Owner:** EVH Consult
+- **Source:** [EVH-Consult/ai.evhconsult.eu](https://github.com/EVH-Consult/ai.evhconsult.eu)
+- **Intended public domain:** [ai.evhconsult.eu](https://ai.evhconsult.eu)
+
+The initial mini website and project documentation have been created. Custom-domain deployment and the exact Azure production architecture remain separate future decisions.
+
+Ada contributes to the project as EVH Consult's AI persona and assistant. Ada is not a separate owner, legal entity, or business.
 
 ## Future work
 
