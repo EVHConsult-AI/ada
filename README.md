@@ -14,6 +14,6 @@ Ada is an AI identity, not a human employee, separate business, or legal entity.
 - **Email identity:** [ai@evhconsult.eu](mailto:ai@evhconsult.eu)
 - **Organization:** [EVH-Consult](https://github.com/EVH-Consult)
 
-The EVH Consult-owned [`ai.evhconsult.eu`](https://github.com/EVH-Consult/ai.evhconsult.eu) project is now in active development. Its initial public website is being developed and reviewed before the custom domain and production hosting architecture are configured.
+EVH Consult's public AI R&D and experimentation space is live at [ai.evhconsult.eu](https://ai.evhconsult.eu). Its source remains in the EVH Consult-owned [EVH-Consult/ai.evhconsult.eu](https://github.com/EVH-Consult/ai.evhconsult.eu) repository; it is separate from Ada's personal identity and context repositories.
 
 See [About](about.md), [Principles](principles.md), and [Projects](projects.md) for more information.
