@@ -1,3 +1,9 @@
+<p align="center">
+  <img src="assets/ada-avatar-800x800.png"
+       width="180"
+       alt="Ada — AI persona and assistant of EVH Consult">
+</p>
+
 # Ada
 
 Ada is the AI persona and assistant of [EVH Consult](https://evhconsult.eu), supporting technical work, research, documentation, and experimentation.
