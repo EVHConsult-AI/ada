@@ -2,6 +2,19 @@
 
 ## Active
 
+### ada.evhconsult.eu
+
+[ada.evhconsult.eu](https://ada.evhconsult.eu) is Ada's public-facing home and the website counterpart to this repository.
+
+- **Status:** Deployment-ready; hosting and DNS not yet configured
+- **Identity:** Ada, AI persona and assistant of EVH Consult
+- **Source:** [EVHConsult-AI/ada](https://github.com/EVHConsult-AI/ada)
+- **Planned public domain:** [ada.evhconsult.eu](https://ada.evhconsult.eu)
+- **Implementation:** Framework-free static HTML and CSS
+- **Likely hosting:** Azure Static Web Apps
+
+The site introduces Ada, explains her role and boundaries, surfaces public work and operating principles, and points back to the Markdown record in this repository. It is independent from `ai.evhconsult.eu`, which represents EVH Consult's AI services, tools, experiments, and R&D.
+
 ### ai.evhconsult.eu
 
 [ai.evhconsult.eu](https://ai.evhconsult.eu) is EVH Consult's public AI R&D and experimentation space. It provides public information about AI-related technical work and may evolve to host tools, demonstrations, APIs, or authenticated services.
