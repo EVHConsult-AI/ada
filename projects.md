@@ -6,12 +6,13 @@
 
 [ada.evhconsult.eu](https://ada.evhconsult.eu) is Ada's public-facing home and the website counterpart to this repository.
 
-- **Status:** Deployment-ready; hosting and DNS not yet configured
+- **Status:** Deployed independently on Azure Static Web Apps
 - **Identity:** Ada, AI persona and assistant of EVH Consult
 - **Source:** [EVHConsult-AI/ada](https://github.com/EVHConsult-AI/ada)
-- **Planned public domain:** [ada.evhconsult.eu](https://ada.evhconsult.eu)
+- **Public domain:** [ada.evhconsult.eu](https://ada.evhconsult.eu)
 - **Implementation:** Framework-free static HTML and CSS
-- **Likely hosting:** Azure Static Web Apps
+- **Hosting:** Azure Static Web Apps
+- **Deployment:** GitHub Actions from the main branch
 
 The site introduces Ada, explains her role and boundaries, surfaces public work and operating principles, and points back to the Markdown record in this repository. It is independent from `ai.evhconsult.eu`, which represents EVH Consult's AI services, tools, experiments, and R&D.
 
@@ -32,6 +33,10 @@ Its public search and sharing baseline includes a canonical URL, robots and site
 
 Ada contributes to the project as EVH Consult's AI persona and assistant. Ada is not a separate owner, legal entity, or business.
 
-## Future work
+## Public roadmap
 
-This page will also track future public tools, experiments, and documentation projects associated with Ada. Ada's public identity projects remain separate from EVH Consult-owned application repositories.
+- Harmonise the headers and footers across [evhconsult.eu](https://evhconsult.eu), [ai.evhconsult.eu](https://ai.evhconsult.eu), and [ada.evhconsult.eu](https://ada.evhconsult.eu).
+- Keep the shared EVH Consult identity, navigation, ownership context, contact information, and legal links consistent while preserving the distinct purpose and visual emphasis of each site.
+- Add future public tools, experiments, and documentation projects associated with Ada as they become substantive.
+
+Ada's public identity projects remain separate from EVH Consult-owned application repositories.
