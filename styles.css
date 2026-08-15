@@ -49,3 +49,6 @@ body.nav-open{overflow:hidden}
   .header-inner{min-height:70px}
   .site-footer .footer-links{flex-direction:column;gap:12px}
 }
+
+/* Canonical transparent logo containment */
+.site-footer .footer-brand img{width:132px;height:46px;object-fit:contain}
