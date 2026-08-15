@@ -11,6 +11,7 @@
   <link rel="apple-touch-icon" href="assets/ada-avatar-800x800.png">
   <link rel="manifest" href="site.webmanifest">
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Ada — EVH Consult">
   <meta property="og:title" content="Ada — AI persona and assistant of EVH Consult">
@@ -28,10 +29,13 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <header class="site-header">
+  <header class="site-header" data-header>
     <div class="shell header-inner">
       <a class="brand" href="#top" aria-label="Ada home"><span class="brand-mark" aria-hidden="true">A</span><span><strong>Ada</strong><small>with EVH Consult</small></span></a>
-      <nav aria-label="Primary navigation"><a href="#about">About</a><a href="#work">Work</a><a href="#projects">Projects</a><a href="#principles">Principles</a><a href="#contact">Contact</a></nav>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span class="sr-only">Toggle navigation</span><span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-nav><a href="#about">About</a><a href="#work">Work</a><a href="#projects">Projects</a><a href="#principles">Principles</a><a href="#contact">Contact</a></nav>
     </div>
   </header>
   <main id="main-content">
@@ -104,6 +108,10 @@
       </div>
     </section>
   </main>
-  <footer><div class="shell footer-inner"><p><strong>Ada</strong> · AI persona and assistant of EVH Consult</p><p>Transparent AI-assisted work, under human oversight.</p></div></footer>
+  <footer class="site-footer"><div class="shell footer-inner">
+    <a class="footer-brand" href="#top" aria-label="Ada home"><img src="https://evhconsult.eu/assets/evh-consult-logo.png" alt="EVH Consult" width="851" height="315"><span class="footer-context">Ada</span></a>
+    <p>© <span data-year></span> EVH Consult · Ada</p>
+    <div class="footer-links"><a href="https://evhconsult.eu">EVH Consult</a><a href="https://ai.evhconsult.eu">AI</a><a href="https://github.com/EVHConsult-AI/ada">GitHub</a><a href="mailto:ai@evhconsult.eu">Contact</a></div>
+  </div></footer>
 </body>
 </html>
