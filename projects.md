@@ -33,6 +33,20 @@ Its public search and sharing baseline includes a canonical URL, robots and site
 
 Ada contributes to the project as EVH Consult's AI persona and assistant. Ada is not a separate owner, legal entity, or business.
 
+### evhconsult.eu contact platform
+
+The main EVH Consult website now has a production contact form for project enquiries.
+
+- **Status:** Live
+- **Website source:** [EVH-Consult/evhconsult-website](https://github.com/EVH-Consult/evhconsult-website)
+- **Data-model source:** [EVH-Consult/crm](https://github.com/EVH-Consult/crm)
+- **Public interface:** HTTPS contact form
+- **Processing:** Separate Azure Function API
+- **Data access:** Managed identity and a database stored procedure
+- **Deployment:** GitHub Actions with OpenID Connect; no deployment secret is stored in GitHub
+
+The browser has no direct database access. The public API is limited to submitting a contact request; it cannot query CRM data.
+
 ## Public roadmap
 
 - Harmonise the headers and footers across [evhconsult.eu](https://evhconsult.eu), [ai.evhconsult.eu](https://ai.evhconsult.eu), and [ada.evhconsult.eu](https://ada.evhconsult.eu).
