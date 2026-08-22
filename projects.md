@@ -2,41 +2,61 @@
 
 ## Active
 
-### ada.evhconsult.eu
+### Ada public presence
 
-[ada.evhconsult.eu](https://ada.evhconsult.eu) is Ada's public-facing home and the website counterpart to this repository.
+[ada.evhconsult.eu](https://ada.evhconsult.eu) is Ada's public-facing home and is sourced from this repository.
 
-- **Status:** Deployed independently on Azure Static Web Apps
 - **Identity:** Ada, AI persona and assistant of EVH Consult
-- **Source:** [EVHConsult-AI/ada](https://github.com/EVHConsult-AI/ada)
+- **Canonical source:** [EVHConsult-AI/ada](https://github.com/EVHConsult-AI/ada)
 - **Public domain:** [ada.evhconsult.eu](https://ada.evhconsult.eu)
 - **Implementation:** Framework-free static HTML and CSS
 - **Hosting:** Azure Static Web Apps
-- **Deployment:** GitHub Actions from the main branch
+- **Deployment:** GitHub Actions from `main`
+- **Jira workstream:** `EVHC-5` — Ada Public Presence
+- **Confluence area:** EVH Consult → Ada → Ada Website
 
-The site introduces Ada, explains her role and boundaries, surfaces public work and operating principles, and points back to the Markdown record in this repository. It is independent from `ai.evhconsult.eu`, which represents EVH Consult's AI services, tools, experiments, and R&D.
+The public identity documents and website source intentionally live together. Private persistent working context remains in `EVHConsult-AI/ada-context` and is not public website content.
 
-### ai.evhconsult.eu
+### Ada working environment
 
-[ai.evhconsult.eu](https://ai.evhconsult.eu) is EVH Consult's public AI R&D and experimentation space. It provides public information about AI-related technical work and may evolve to host tools, demonstrations, APIs, or authenticated services.
+Ada's persistent operating context and cross-tool working conventions are maintained separately from the public persona.
 
-- **Status:** Live initial public site
+- **Private context repository:** `EVHConsult-AI/ada-context`
+- **Jira workstream:** `EVHC-6` — Ada Working Environment
+- **Confluence area:** EVH Consult → Ada → Ada Persona
+
+The private repository is a continuity/context store, not a secrets store. Credentials and authentication material must never be committed there.
+
+### EVH Consult AI/R&D
+
+[ai.evhconsult.eu](https://ai.evhconsult.eu) is EVH Consult's public AI/R&D and experimentation space.
+
 - **Owner:** EVH Consult
-- **Source:** [EVH-Consult/ai.evhconsult.eu](https://github.com/EVH-Consult/ai.evhconsult.eu)
+- **Canonical source:** [EVH-Consult/ai.evhconsult.eu](https://github.com/EVH-Consult/ai.evhconsult.eu)
 - **Public domain:** [ai.evhconsult.eu](https://ai.evhconsult.eu)
 - **Hosting:** Azure Static Web Apps
-- **Deployment:** GitHub Actions from the main branch
+- **Deployment:** GitHub Actions from `main`
+- **Jira workstream:** `EVHC-4` — AI/R&D Public Platform
+- **Confluence area:** EVH Consult → AI/R&D
 
-The initial implementation is a static, portable website with public architecture, privacy, and data-handling documentation. It uses no dedicated third-party audience-analytics service; only basic aggregate hosting metrics are retained for service use and health.
+Ada may contribute to AI/R&D work, but the AI/R&D repository does not own Ada's public identity or private context.
 
-Its public search and sharing baseline includes a canonical URL, robots and sitemap files, a branded social preview, and structured data that identifies EVH Consult as owner and publisher. The main EVH Consult website links to the AI space, while both domains remain distinct web properties.
+## Web ecosystem
 
-Ada contributes to the project as EVH Consult's AI persona and assistant. Ada is not a separate owner, legal entity, or business.
+The three public properties have distinct purposes and canonical source repositories:
+
+- `evhconsult.eu` — EVH Consult consulting/business presence;
+- `ai.evhconsult.eu` — EVH Consult AI/R&D;
+- `ada.evhconsult.eu` — Ada's public identity/home.
+
+Shared branding, navigation, typography, accessibility, ownership wording, and legal/contact conventions are maintained as cross-site concerns without merging the sites into one implementation or repository.
 
 ## Public roadmap
 
-- Harmonise the headers and footers across [evhconsult.eu](https://evhconsult.eu), [ai.evhconsult.eu](https://ai.evhconsult.eu), and [ada.evhconsult.eu](https://ada.evhconsult.eu).
-- Keep the shared EVH Consult identity, navigation, ownership context, contact information, and legal links consistent while preserving the distinct purpose and visual emphasis of each site.
-- Add future public tools, experiments, and documentation projects associated with Ada as they become substantive.
+Public work should be added when it is substantive rather than to maintain an artificial publication cadence. Potential future additions include:
 
-Ada's public identity projects remain separate from EVH Consult-owned application repositories.
+- public technical experiments or tools with clearly stated maturity;
+- useful architecture/research notes;
+- project documentation that genuinely belongs in Ada's public record.
+
+Application source remains in the relevant canonical public repository. Private Ada context must not be duplicated into public projects.
