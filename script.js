@@ -57,6 +57,7 @@
   const GA_MEASUREMENT_ID = 'G-0JKQTTXSF3';
   const PRIVACY_URL = 'https://evhconsult.eu/privacy.html';
   const CHANGE_EVENT = 'evh:analytics-consent-changed';
+  const CONSENT_STYLESHEET = '/consent.css';
   const isProductionDomain = location.hostname === 'evhconsult.eu' || location.hostname.endsWith('.evhconsult.eu');
 
   window.dataLayer = window.dataLayer || [];
@@ -126,23 +127,32 @@
     changeEvent: CHANGE_EVENT
   });
 
+  const ensureStyles = () => {
+    if (document.querySelector('link[data-evh-consent-styles]')) return;
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = CONSENT_STYLESHEET;
+    link.dataset.evhConsentStyles = '';
+    document.head.appendChild(link);
+  };
+
   const initUi = () => {
-    const style = document.createElement('style');
-    style.textContent = `
-      .evh-consent{position:fixed;z-index:10000;left:1rem;right:1rem;bottom:1rem;max-width:760px;margin:0 auto;padding:1rem 1.1rem;background:#fff;color:#172033;border:1px solid rgba(23,32,51,.18);border-radius:12px;box-shadow:0 18px 50px rgba(0,0,0,.22);font:14px/1.5 Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-      .evh-consent[hidden]{display:none}.evh-consent h2{margin:0 0 .35rem;font-size:1.05rem;color:inherit}.evh-consent p{margin:.35rem 0}.evh-consent a{color:#304f9d;text-decoration:underline;text-underline-offset:2px}.evh-consent-status{font-weight:600}.evh-consent-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.8rem}.evh-consent button{appearance:none;border:1px solid #304f9d;border-radius:8px;padding:.58rem .85rem;font:inherit;font-weight:700;cursor:pointer;background:#fff;color:#304f9d}.evh-consent button[data-consent-accept],.evh-consent button[data-consent-refuse]{background:#304f9d;color:#fff}.evh-consent button[data-consent-close]{border-color:rgba(23,32,51,.3);color:#172033}.evh-cookie-settings{appearance:none;border:0;background:none;padding:0;color:inherit;font:inherit;cursor:pointer;text-decoration:none}.evh-cookie-settings:hover,.evh-cookie-settings:focus-visible{text-decoration:underline;text-underline-offset:3px}@media(max-width:560px){.evh-consent-actions button{flex:1 1 100%}}
-    `;
-    document.head.appendChild(style);
+    ensureStyles();
+
+    const backdrop = document.createElement('div');
+    backdrop.className = 'evh-consent-backdrop';
+    backdrop.hidden = true;
+    document.body.appendChild(backdrop);
 
     const panel = document.createElement('section');
     panel.className = 'evh-consent';
     panel.hidden = true;
     panel.tabIndex = -1;
-    panel.setAttribute('role', 'region');
-    panel.setAttribute('aria-label', 'Analytics cookie settings');
+    panel.setAttribute('role', 'dialog');
+    panel.setAttribute('aria-labelledby', 'evh-consent-title');
     panel.innerHTML = `
-      <h2>Analytics cookies</h2>
-      <p>EVH Consult uses Google Analytics 4 only with your consent to understand aggregate site use, regional/campaign effectiveness and successful contact requests. It is not used for advertising or remarketing.</p>
+      <h2 id="evh-consent-title">Analytics cookies</h2>
+      <p>EVH Consult uses Google Analytics 4 only with your consent for aggregate site use, regional/campaign effectiveness and successful contact requests. It is not used for advertising or remarketing.</p>
       <p class="evh-consent-status" data-consent-status></p>
       <p><a href="${PRIVACY_URL}">Privacy &amp; cookie information</a></p>
       <div class="evh-consent-actions">
@@ -155,6 +165,7 @@
     const status = panel.querySelector('[data-consent-status]');
     const closeButton = panel.querySelector('[data-consent-close]');
     let returnFocus = null;
+    let settingsMode = false;
 
     const renderStatus = () => {
       const choice = readChoice();
@@ -162,19 +173,28 @@
         ? 'Analytics is currently allowed.'
         : choice === 'denied'
           ? 'Analytics is currently refused.'
-          : 'No analytics choice has been stored yet. No Google Analytics request is made until you accept.';
+          : 'No analytics choice has been stored. Analytics remains blocked until you accept.';
     };
 
-    const openPanel = (settingsMode = true, trigger = null) => {
+    const openPanel = (asSettings = true, trigger = null) => {
+      settingsMode = asSettings;
       returnFocus = trigger;
       renderStatus();
-      panel.hidden = false;
+      panel.classList.toggle('evh-consent-settings', settingsMode);
       closeButton.hidden = !settingsMode;
+      backdrop.hidden = !settingsMode;
+      if (settingsMode) panel.setAttribute('aria-modal', 'true');
+      else panel.removeAttribute('aria-modal');
+      panel.hidden = false;
       if (settingsMode) panel.focus();
     };
 
     const closePanel = () => {
       panel.hidden = true;
+      backdrop.hidden = true;
+      panel.classList.remove('evh-consent-settings');
+      panel.removeAttribute('aria-modal');
+      settingsMode = false;
       if (returnFocus instanceof HTMLElement) returnFocus.focus();
       returnFocus = null;
     };
@@ -183,35 +203,43 @@
       applyChoice('granted', true);
       closePanel();
     });
-
     panel.querySelector('[data-consent-refuse]').addEventListener('click', () => {
       applyChoice('denied', true);
       closePanel();
     });
-
     closeButton.addEventListener('click', closePanel);
-
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && !panel.hidden && !closeButton.hidden) closePanel();
+    backdrop.addEventListener('click', () => {
+      if (settingsMode) closePanel();
     });
 
-    document.querySelectorAll('.footer-links').forEach((footerLinks) => {
-      if (!footerLinks.querySelector('[data-privacy-link]')) {
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && settingsMode && !panel.hidden) closePanel();
+    });
+
+    document.querySelectorAll('.footer-links, .footer-nav').forEach((footerLinks) => {
+      const existingPrivacy = Array.from(footerLinks.querySelectorAll('a')).find((link) => link.href === PRIVACY_URL);
+      if (!existingPrivacy && !footerLinks.querySelector('[data-privacy-link]')) {
         const privacy = document.createElement('a');
         privacy.href = PRIVACY_URL;
         privacy.textContent = 'Privacy & cookies';
         privacy.dataset.privacyLink = '';
         footerLinks.appendChild(privacy);
       }
-      if (!footerLinks.querySelector('[data-cookie-settings]')) {
-        const settings = document.createElement('button');
-        settings.type = 'button';
-        settings.className = 'evh-cookie-settings';
-        settings.textContent = 'Cookie settings';
-        settings.dataset.cookieSettings = '';
-        footerLinks.appendChild(settings);
-      }
     });
+
+    document.querySelectorAll('.site-footer [data-cookie-settings]').forEach((button) => button.remove());
+    const copyright = Array.from(document.querySelectorAll('.site-footer p')).find((item) => item.textContent.includes('©'));
+    if (copyright && !copyright.querySelector('[data-cookie-settings]')) {
+      const wrapper = document.createElement('span');
+      wrapper.className = 'evh-footer-settings';
+      const settings = document.createElement('button');
+      settings.type = 'button';
+      settings.className = 'evh-cookie-settings';
+      settings.textContent = 'Cookie settings';
+      settings.dataset.cookieSettings = '';
+      wrapper.appendChild(settings);
+      copyright.appendChild(wrapper);
+    }
 
     document.querySelectorAll('[data-cookie-settings]').forEach((button) => {
       button.addEventListener('click', () => openPanel(true, button));
@@ -220,9 +248,6 @@
     if (!readChoice()) openPanel(false);
   };
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initUi, { once: true });
-  } else {
-    initUi();
-  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initUi, { once: true });
+  else initUi();
 })();
