@@ -33,19 +33,22 @@ The EVH Consult organization also has an empty `EVH-Consult/ada.evhconsult.eu` r
 
 ## Website implementation
 
-The site is plain semantic HTML and CSS. It has no framework, build step, backend, analytics, tracking, cookies, or third-party runtime dependencies.
+The site is plain semantic HTML and CSS. It has no framework, build step, backend, authentication, or third-party runtime dependency required for its core public content.
+
+Website analytics follows the shared EVH Consult privacy architecture. Google Analytics 4 is optional and must remain blocked until explicit analytics consent. A strictly functional consent-preference cookie can be shared across `*.evhconsult.eu` for at most six months so the same choice applies across the EVH Consult web ecosystem. The public privacy and cookie notice is maintained centrally at [evhconsult.eu/privacy.html](https://evhconsult.eu/privacy.html).
 
 Deployment is handled through Azure Static Web Apps from the `main` branch, with `https://ada.evhconsult.eu` as the canonical public URL. The implementation remains portable to another static host.
 
 ## EVH Consult web ecosystem
 
-Ada's site is one of three distinct EVH Consult public properties:
+Ada's site is one of four EVH Consult public properties:
 
 - [evhconsult.eu](https://evhconsult.eu) — consulting/business presence;
 - [ai.evhconsult.eu](https://ai.evhconsult.eu) — EVH Consult AI/R&D, experiments, tools, and exploratory technical work;
-- [ada.evhconsult.eu](https://ada.evhconsult.eu) — Ada's public identity/home.
+- [ada.evhconsult.eu](https://ada.evhconsult.eu) — Ada's public identity/home;
+- [erwin.evhconsult.eu](https://erwin.evhconsult.eu) — Erwin Vanhecke's personal/professional public presence.
 
-The sites share branding, navigation, typography, and accessibility conventions where appropriate while remaining independently deployable and retaining separate purposes and canonical source repositories.
+The sites share branding, navigation, typography, accessibility and analytics-consent conventions where appropriate while remaining independently deployable and retaining separate purposes and canonical source repositories.
 
 ## Work and knowledge management
 
