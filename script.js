@@ -130,13 +130,14 @@
     const style = document.createElement('style');
     style.textContent = `
       .evh-consent{position:fixed;z-index:10000;left:1rem;right:1rem;bottom:1rem;max-width:760px;margin:0 auto;padding:1rem 1.1rem;background:#fff;color:#172033;border:1px solid rgba(23,32,51,.18);border-radius:12px;box-shadow:0 18px 50px rgba(0,0,0,.22);font:14px/1.5 Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-      .evh-consent[hidden]{display:none}.evh-consent h2{margin:0 0 .35rem;font-size:1.05rem;color:inherit}.evh-consent p{margin:.35rem 0}.evh-consent a{color:#304f9d;text-decoration:underline;text-underline-offset:2px}.evh-consent-status{font-weight:600}.evh-consent-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.8rem}.evh-consent button{appearance:none;border:1px solid #304f9d;border-radius:8px;padding:.58rem .85rem;font:inherit;font-weight:700;cursor:pointer;background:#fff;color:#304f9d}.evh-consent button[data-consent-accept]{background:#304f9d;color:#fff}.evh-consent button[data-consent-close]{border-color:rgba(23,32,51,.3);color:#172033}.evh-cookie-settings{appearance:none;border:0;background:none;padding:0;color:inherit;font:inherit;cursor:pointer;text-decoration:none}.evh-cookie-settings:hover,.evh-cookie-settings:focus-visible{text-decoration:underline;text-underline-offset:3px}@media(max-width:560px){.evh-consent-actions button{flex:1 1 100%}}
+      .evh-consent[hidden]{display:none}.evh-consent h2{margin:0 0 .35rem;font-size:1.05rem;color:inherit}.evh-consent p{margin:.35rem 0}.evh-consent a{color:#304f9d;text-decoration:underline;text-underline-offset:2px}.evh-consent-status{font-weight:600}.evh-consent-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.8rem}.evh-consent button{appearance:none;border:1px solid #304f9d;border-radius:8px;padding:.58rem .85rem;font:inherit;font-weight:700;cursor:pointer;background:#fff;color:#304f9d}.evh-consent button[data-consent-accept],.evh-consent button[data-consent-refuse]{background:#304f9d;color:#fff}.evh-consent button[data-consent-close]{border-color:rgba(23,32,51,.3);color:#172033}.evh-cookie-settings{appearance:none;border:0;background:none;padding:0;color:inherit;font:inherit;cursor:pointer;text-decoration:none}.evh-cookie-settings:hover,.evh-cookie-settings:focus-visible{text-decoration:underline;text-underline-offset:3px}@media(max-width:560px){.evh-consent-actions button{flex:1 1 100%}}
     `;
     document.head.appendChild(style);
 
     const panel = document.createElement('section');
     panel.className = 'evh-consent';
     panel.hidden = true;
+    panel.tabIndex = -1;
     panel.setAttribute('role', 'region');
     panel.setAttribute('aria-label', 'Analytics cookie settings');
     panel.innerHTML = `
@@ -169,7 +170,7 @@
       renderStatus();
       panel.hidden = false;
       closeButton.hidden = !settingsMode;
-      panel.querySelector('[data-consent-accept]').focus();
+      if (settingsMode) panel.focus();
     };
 
     const closePanel = () => {
