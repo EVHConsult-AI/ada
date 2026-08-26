@@ -54,7 +54,7 @@
 (() => {
   const COOKIE_NAME = 'evh_analytics_consent';
   const COOKIE_MAX_AGE = 60 * 60 * 24 * 180;
-  const GA_MEASUREMENT_ID = 'G-0JKQTTXSF3';
+  const GA_MEASUREMENT_ID = 'G-QJKQTTXSF3';
   const PRIVACY_URL = 'https://evhconsult.eu/privacy.html';
   const CHANGE_EVENT = 'evh:analytics-consent-changed';
   const CONSENT_STYLESHEET = '/consent.css';
