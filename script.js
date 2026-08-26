@@ -2,7 +2,7 @@
   const toggle = document.querySelector('[data-nav-toggle]');
   const nav = document.querySelector('[data-nav]');
   const year = document.querySelector('[data-year]');
-  const mobileBreakpoint = 900;
+  const mobileBreakpoint = 1040;
 
   if (year) year.textContent = new Date().getFullYear();
   const navLinks = nav ? Array.from(nav.querySelectorAll('a')) : [];
