@@ -1,5 +1,5 @@
 (() => {
-  const MEASUREMENT_ID = 'G-0JKQTTXSF3';
+  const MEASUREMENT_ID = 'G-QJKQTTXSF3';
   const APPROVED_HOSTS = new Set([
     'evhconsult.eu',
     'ai.evhconsult.eu',
