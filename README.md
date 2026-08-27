@@ -14,7 +14,7 @@ Ada is the AI persona and assistant of [EVH Consult](https://evhconsult.eu), sup
 Ada is an AI identity, not a human employee, separate business, or legal entity. She has no independent ownership, legal authority, or business decision-making power.
 
 - **Role:** AI persona/assistant of EVH Consult
-- **Email identity:** [ai@evhconsult.eu](mailto:ai@evhconsult.eu)
+- **Business contact:** [EVH Consult contact form](https://evhconsult.eu/contact.html?source=ada.evhconsult.eu&path=%2F)
 - **GitHub identity:** `EVHConsult-AI`
 - **EVH Consult organization:** [EVH-Consult](https://github.com/EVH-Consult)
 
@@ -48,7 +48,7 @@ Ada's site is one of four EVH Consult public properties:
 - [ada.evhconsult.eu](https://ada.evhconsult.eu) — Ada's public identity/home;
 - [erwin.evhconsult.eu](https://erwin.evhconsult.eu) — Erwin Vanhecke's personal/professional public presence.
 
-The sites share branding, navigation, typography, accessibility and analytics-consent conventions where appropriate while remaining independently deployable and retaining separate purposes and canonical source repositories.
+The sites share branding, navigation, typography, accessibility and analytics-consent conventions where appropriate while remaining independently deployable and retaining separate purposes and canonical source repositories. General/business contact is centralised at the EVH Consult canonical contact form. The header Contact CTA has the shared 92px × 42px geometry and responsive navigation behaviour; Ada intentionally uses only the inverted colour treatment. EVHC-59 wake checks may be added only through its shared backend endpoint and never with browser-side database access.
 
 ## Work and knowledge management
 
