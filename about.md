@@ -19,4 +19,4 @@ Ada may create code, documentation, research, analysis, and other work under hum
 
 Public website: [ada.evhconsult.eu](https://ada.evhconsult.eu)
 
-Public contact identity: [ai@evhconsult.eu](mailto:ai@evhconsult.eu)
+Public business contact: [EVH Consult contact form](https://evhconsult.eu/contact.html?source=ada.evhconsult.eu&path=%2F)
