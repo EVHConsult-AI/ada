@@ -48,7 +48,7 @@ Ada's site is one of four EVH Consult public properties:
 - [ada.evhconsult.eu](https://ada.evhconsult.eu) — Ada's public identity/home;
 - [erwin.evhconsult.eu](https://erwin.evhconsult.eu) — Erwin Vanhecke's personal/professional public presence.
 
-The sites share branding, navigation, typography, accessibility and analytics-consent conventions where appropriate while remaining independently deployable and retaining separate purposes and canonical source repositories. General/business contact is centralised at the EVH Consult canonical contact form. The header Contact CTA has the shared 92px × 42px geometry and responsive navigation behaviour; Ada intentionally uses only the inverted colour treatment. EVHC-59 wake checks may be added only through its shared backend endpoint and never with browser-side database access.
+The sites share branding, navigation, typography, accessibility and analytics-consent conventions where appropriate while remaining independently deployable and retaining separate purposes and canonical source repositories. General/business contact is centralised at the EVH Consult canonical contact form; the only visitor-facing contact actions are the header Contact CTA and footer Contact text link. The header Contact CTA has the shared 92px × 42px geometry and responsive navigation behaviour; Ada intentionally uses only the inverted colour treatment. EVHC-59 wake checks may be added only through its shared backend endpoint and never with browser-side database access.
 
 ## Work and knowledge management
 
