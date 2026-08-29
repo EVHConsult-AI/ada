@@ -51,15 +51,17 @@ Ada's site is one of four EVH Consult public properties:
 - [ada.evhconsult.eu](https://ada.evhconsult.eu) — Ada's public identity/home;
 - [erwin.evhconsult.eu](https://erwin.evhconsult.eu) — Erwin Vanhecke's personal/professional public presence.
 
-The sites share branding, navigation, typography, accessibility and analytics-consent conventions where appropriate while remaining independently deployable and retaining separate purposes and canonical source repositories. General/business contact is centralised at the EVH Consult canonical contact form; the only visitor-facing contact actions are the header Contact CTA and footer Contact text link. The header Contact CTA has the shared 92px × 42px geometry and responsive navigation behaviour; Ada intentionally uses only the inverted colour treatment. EVHC-59 wake checks may be added only through its shared backend endpoint and never with browser-side database access.
+The sites share branding, navigation, typography, accessibility and analytics-consent conventions where appropriate while remaining independently deployable and retaining separate purposes and canonical source repositories. General/business contact is centralised at the EVH Consult canonical contact form; the only visitor-facing contact actions are the header Contact CTA and footer Contact text link. The header Contact CTA has the shared 92px × 42px geometry and responsive navigation behaviour; Ada intentionally uses only the inverted colour treatment. Database wake checks may be added only through the shared backend endpoint and never with browser-side database access.
 
 ## Work and knowledge management
 
 Responsibilities are deliberately separated:
 
 - **GitHub** — public identity, website implementation, public documentation, and review history;
-- **Jira (`EVHC`)** — concrete planned work and defects; `EVHC-5` tracks Ada Public Presence;
-- **Confluence / EVH Consult / Ada** — durable operating structure, repository boundaries, and design decisions;
-- **`EVHConsult-AI/ada-context`** — private persistent working context; `EVHC-6` tracks Ada Working Environment work.
+- **Work tracking** — concrete planned work and defects;
+- **Architecture documentation** — durable operating structure, repository boundaries, and design decisions;
+- **Private working context** — persistent context that does not belong in public documentation or another authoritative system.
+
+Different systems own different kinds of truth. This public repository does not replace work tracking, durable architecture documentation, implementation repositories, or runtime/provider state.
 
 EVH Consult's public AI/R&D platform remains separate in [EVH-Consult/ai.evhconsult.eu](https://github.com/EVH-Consult/ai.evhconsult.eu).
