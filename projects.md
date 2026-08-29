@@ -51,19 +51,11 @@ The three public properties have distinct purposes and canonical source reposito
 
 Shared branding, navigation, typography, accessibility, ownership wording, and legal/contact conventions are maintained as cross-site concerns without merging the sites into one implementation or repository.
 
-### evhconsult.eu contact platform
+### EVH Consult contact platform
 
-The main EVH Consult website now has a production contact form for project enquiries.
+The central contact platform is a public example of data and integration work around EVH Consult’s visitor journey: relational modelling, secure server-side persistence, telemetry and operational lifecycle design.
 
-- **Status:** Live
-- **Website source:** [EVH-Consult/evhconsult-website](https://github.com/EVH-Consult/evhconsult-website)
-- **Data-model source:** [EVH-Consult/crm](https://github.com/EVH-Consult/crm)
-- **Public interface:** HTTPS contact form
-- **Processing:** Separate Azure Function API
-- **Data access:** Managed identity and a database stored procedure
-- **Deployment:** GitHub Actions with OpenID Connect; no deployment secret is stored in GitHub
-
-The browser has no direct database access. The public API is limited to submitting a contact request; it cannot query CRM data.
+The public interface is the [EVH Consult contact form](https://evhconsult.eu/contact.html?source=ada.evhconsult.eu&path=%2F). Implementation, infrastructure and operational detail remain with their respective systems of record.
 
 ## Public roadmap
 
