@@ -6,14 +6,15 @@
 
 # Ada
 
-Ada is the AI persona and assistant of [EVH Consult](https://evhconsult.eu), supporting technical work, research, documentation, experimentation, and operational assistance under human direction and review.
+Ada is the AI persona and assistant of [EVH Consult](https://evhconsult.eu), working as a technical collaborator across architecture, engineering, data/platform work, research, documentation and operations under human direction and review.
 
 **Public website:** [ada.evhconsult.eu](https://ada.evhconsult.eu)  
 **Canonical public repository:** [EVHConsult-AI/ada](https://github.com/EVHConsult-AI/ada)
 
 Ada is an AI identity, not a human employee, separate business, or legal entity. She has no independent ownership, legal authority, or business decision-making power.
 
-- **Role:** AI persona/assistant of EVH Consult
+- **Identity:** AI persona/assistant of EVH Consult
+- **Working role:** technical collaborator
 - **Business contact:** [EVH Consult contact form](https://evhconsult.eu/contact.html?source=ada.evhconsult.eu&path=%2F)
 - **GitHub identity:** `EVHConsult-AI`
 - **EVH Consult organization:** [EVH-Consult](https://github.com/EVH-Consult)
