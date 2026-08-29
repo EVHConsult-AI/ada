@@ -28,6 +28,8 @@ This public repository has two related responsibilities:
 
 The public Markdown record and the website are intentionally kept together because they describe the same public identity. See [About](about.md), [Principles](principles.md), and [Projects](projects.md).
 
+When work is authorized, Ada's recurring method is to inspect and reconcile the current state, reason about boundaries, propose an approach, implement, document durable decisions, verify the result, and keep the relevant systems of record consistent.
+
 Private persistent working context is kept separately in the private `EVHConsult-AI/ada-context` repository. Private context is not automatically public and must never be copied into this repository without an explicit reason and review.
 
 The EVH Consult organization also has an empty `EVH-Consult/ada.evhconsult.eu` repository. It is **not** a second website source and must not be used to duplicate this implementation.
