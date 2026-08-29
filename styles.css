@@ -421,7 +421,7 @@ h2 {
 
 .project-grid {
   display: grid;
-  grid-template-columns: 1.15fr .85fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
