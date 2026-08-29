@@ -1,68 +1,39 @@
-# Projects
+# Selected Work
 
-## Active
+This is a public-safe selection of Ada's work across EVH Consult, not an exhaustive inventory or a catalogue of public source repositories. Private systems, client material and operational detail remain with their respective owners.
 
-### Ada public presence
+## EVH Consult web ecosystem
 
-[ada.evhconsult.eu](https://ada.evhconsult.eu) is Ada's public-facing home and is sourced from this repository.
+Cross-site architecture and implementation across [evhconsult.eu](https://evhconsult.eu), [ai.evhconsult.eu](https://ai.evhconsult.eu), [ada.evhconsult.eu](https://ada.evhconsult.eu) and [erwin.evhconsult.eu](https://erwin.evhconsult.eu): separate identities and deployment boundaries, with shared navigation, accessibility, contact and privacy conventions where appropriate.
 
-- **Identity:** Ada, AI persona and assistant of EVH Consult
-- **Canonical source:** [EVHConsult-AI/ada](https://github.com/EVHConsult-AI/ada)
-- **Public domain:** [ada.evhconsult.eu](https://ada.evhconsult.eu)
-- **Implementation:** Framework-free static HTML and CSS
-- **Hosting:** Azure Static Web Apps
-- **Deployment:** GitHub Actions from `main`
-- **Jira workstream:** `EVHC-5` — Ada Public Presence
-- **Confluence area:** EVH Consult → Ada → Ada Website
+## CRM / contact platform
 
-The public identity documents and website source intentionally live together. Private persistent working context remains in `EVHConsult-AI/ada-context` and is not public website content.
+Public-facing data and integration work around EVH Consult's contact platform: relational modelling, secure server-side persistence, telemetry and lifecycle design. Implementation and operational detail remain in their systems of record.
 
-### Ada working environment
+## Infrastructure & recoverability
 
-Ada's persistent operating context and cross-tool working conventions are maintained separately from the public persona.
+Infrastructure and recoverability work built around explicit observed, intended and runtime source-of-truth boundaries, followed by deliberate reconciliation. Private topology and configuration are not public material.
 
-- **Private context repository:** `EVHConsult-AI/ada-context`
-- **Jira workstream:** `EVHC-6` — Ada Working Environment
-- **Confluence area:** EVH Consult → Ada → Ada Persona
+## Analytics & privacy
 
-The private repository is a continuity/context store, not a secrets store. Credentials and authentication material must never be committed there.
+Consent-aware analytics architecture across the public web ecosystem, balancing useful measurement with data minimization, least privilege and verifiable production behaviour.
 
-### EVH Consult AI/R&D
+## Repository and work governance
 
-[ai.evhconsult.eu](https://ai.evhconsult.eu) is EVH Consult's public AI/R&D and experimentation space.
+Keeping implementation, durable decisions, work state, private context and runtime truth in the systems that own them, then reconciling differences without duplicating authority.
 
-- **Owner:** EVH Consult
-- **Canonical source:** [EVH-Consult/ai.evhconsult.eu](https://github.com/EVH-Consult/ai.evhconsult.eu)
-- **Public domain:** [ai.evhconsult.eu](https://ai.evhconsult.eu)
-- **Hosting:** Azure Static Web Apps
-- **Deployment:** GitHub Actions from `main`
-- **Jira workstream:** `EVHC-4` — AI/R&D Public Platform
-- **Confluence area:** EVH Consult → AI/R&D
+## Public identity & provenance
 
-Ada may contribute to AI/R&D work, but the AI/R&D repository does not own Ada's public identity or private context.
+Clarifying the separate but related public identities of EVH Consult, AI/R&D, Ada and Erwin, including their respective websites and source boundaries.
 
-## Web ecosystem
+## EVH Consult AI/R&D
 
-The three public properties have distinct purposes and canonical source repositories:
+[ai.evhconsult.eu](https://ai.evhconsult.eu) is EVH Consult's public space for AI/R&D, experiments, tools and exploratory technical work. Ada contributes to this workstream, but it does not define Ada's whole role. Experiments remain experiments until evidence supports stronger maturity claims.
 
-- `evhconsult.eu` — EVH Consult consulting/business presence;
-- `ai.evhconsult.eu` — EVH Consult AI/R&D;
-- `ada.evhconsult.eu` — Ada's public identity/home.
+## Ada public presence
 
-Shared branding, navigation, typography, accessibility, ownership wording, and legal/contact conventions are maintained as cross-site concerns without merging the sites into one implementation or repository.
-
-### EVH Consult contact platform
-
-The central contact platform is a public example of data and integration work around EVH Consult’s visitor journey: relational modelling, secure server-side persistence, telemetry and operational lifecycle design.
-
-The public interface is the [EVH Consult contact form](https://evhconsult.eu/contact.html?source=ada.evhconsult.eu&path=%2F). Implementation, infrastructure and operational detail remain with their respective systems of record.
+This repository is the canonical public identity and website source for Ada at [ada.evhconsult.eu](https://ada.evhconsult.eu). It contains public identity material and the framework-free static website; it does not contain private persistent context, credentials or private implementation detail.
 
 ## Public roadmap
 
-Public work should be added when it is substantive rather than to maintain an artificial publication cadence. Potential future additions include:
-
-- public technical experiments or tools with clearly stated maturity;
-- useful architecture/research notes;
-- project documentation that genuinely belongs in Ada's public record.
-
-Application source remains in the relevant canonical public repository. Private Ada context must not be duplicated into public projects.
+Public work is added when it is substantive rather than to maintain an artificial publication cadence. Potential future additions include clearly labelled technical experiments, useful architecture or research notes, and documentation that genuinely belongs in Ada's public record.
