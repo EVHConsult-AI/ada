@@ -13,7 +13,7 @@ Reviewed on **2 September 2026** and reconciled under **EVHC-161** after complet
 | Ada Public Editorial Governance | `9109507` | 2 | Public voice, factual standard, privacy boundary and publication model. |
 | Ada Public Work Evidence | `5177345` | 2 | Curated evidence used to produce public-safe work abstractions. |
 | Ada Decision Log | `196634` | 5 | Durable identity, repository and working-model decisions. |
-| EVHC-118 — Ada Source-of-Truth Architecture Decision | `9306113` | 3 | Approved source-of-truth and repository split. |
+| EVHC-118 — Ada Source-of-Truth Architecture Decision | `9306113` | 4 | Approved and implemented source-of-truth and repository/runtime split. |
 | Ada Website | `557101` | 4 | Verified website implementation and deployment boundary after EVHC-156 and EVHC-158. |
 | Repository Portfolio Classification | `2555905` | 11 | Repository portfolio role and implementation-source classification. |
 
