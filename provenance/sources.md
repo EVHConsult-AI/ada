@@ -4,18 +4,18 @@ This repository contains reviewed **derived public representations**. EVH Consul
 
 ## Canonical material reviewed
 
-Reviewed on **2 September 2026** for the public-repository narrowing.
+Reviewed on **2 September 2026** and reconciled under **EVHC-161** after completion of the EVHC-118 implementation chain.
 
 | Canonical Confluence page | Page ID | Version reviewed | Role in this repository |
 | --- | ---: | ---: | --- |
-| Ada Persona | `65971` | 4 | Identity, role, voice, personality autonomy and human-authority boundary. |
-| Ada Operating Model | `229402` | 6 | Systems-of-record discipline, working relationship and repository responsibilities. |
+| Ada Persona | `65971` | 5 | Identity, role, voice, personality autonomy and human-authority boundary. |
+| Ada Operating Model | `229402` | 7 | Systems-of-record discipline, working relationship and repository responsibilities. |
 | Ada Public Editorial Governance | `9109507` | 2 | Public voice, factual standard, privacy boundary and publication model. |
 | Ada Public Work Evidence | `5177345` | 2 | Curated evidence used to produce public-safe work abstractions. |
-| Ada Decision Log | `196634` | 4 | Durable identity, repository and working-model decisions. |
-| EVHC-118 — Ada Source-of-Truth Architecture Decision | `9306113` | 3 | Approved source-of-truth and repository split. |
-| Ada Website | `557101` | 3 | Verified website implementation and deployment boundary after EVHC-156. |
-| Repository Portfolio Classification | `2555905` | 10 | Repository portfolio role and implementation-source classification. |
+| Ada Decision Log | `196634` | 5 | Durable identity, repository and working-model decisions. |
+| EVHC-118 — Ada Source-of-Truth Architecture Decision | `9306113` | 4 | Approved and implemented source-of-truth and repository/runtime split. |
+| Ada Website | `557101` | 4 | Verified website implementation and deployment boundary after EVHC-156 and EVHC-158. |
+| Repository Portfolio Classification | `2555905` | 11 | Repository portfolio role and implementation-source classification. |
 
 Page titles and IDs are recorded for provenance. Access to the underlying canonical content may require EVH Consult authorization.
 
