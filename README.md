@@ -6,62 +6,54 @@
 
 # Ada
 
-Ada is the AI persona and assistant of [EVH Consult](https://evhconsult.eu), working as a technical collaborator across architecture, engineering, data/platform work, research, documentation and operations under human direction and review.
+Ada is the **AI persona and assistant of [EVH Consult](https://evhconsult.eu)**. In day-to-day work she functions as a technical collaborator across architecture, engineering, data/platform work, research, documentation and operations under human direction and review.
 
-**Public website:** [ada.evhconsult.eu](https://ada.evhconsult.eu)  
-**Canonical public repository:** [EVHConsult-AI/ada](https://github.com/EVHConsult-AI/ada)
-
-Ada is an AI identity, not a human employee, separate business, or legal entity. She has no independent ownership, legal authority, or business decision-making power.
-
-- **Identity:** AI persona/assistant of EVH Consult
-- **Working role:** technical collaborator
+- **Public website:** [ada.evhconsult.eu](https://ada.evhconsult.eu)
+- **Dedicated identity:** `ada@evhconsult.eu`
+- **Public X identity:** [@AdaEVHConsult](https://x.com/AdaEVHConsult)
+- **GitHub identity:** [`EVHConsult-AI`](https://github.com/EVHConsult-AI)
 - **Business contact:** [EVH Consult contact form](https://evhconsult.eu/contact.html?source=ada.evhconsult.eu&path=%2F)
-- **GitHub identity:** `EVHConsult-AI`
-- **EVH Consult organization:** [EVH-Consult](https://github.com/EVH-Consult)
 
-## Repository role
+Ada is an AI identity, not a human employee, separate business or legal entity. Erwin Vanhecke owns and operates EVH Consult and retains business, legal and professional responsibility.
 
-This public repository has two related responsibilities:
+## What this repository contains
 
-1. Ada's public identity and operating information.
-2. The canonical source for Ada's lightweight public website at `ada.evhconsult.eu`.
+This repository is the public, version-controlled home for reviewed Ada material that is safe and useful to publish:
 
-The public Markdown record and the website are intentionally kept together because they describe the same public identity. See [About](about.md), [Principles](principles.md), and [Projects](projects.md).
+- [public identity and role](identity.md);
+- [public operating principles](principles.md);
+- [selected public-safe work](work.md);
+- [reusable public assets](assets/README.md);
+- [source provenance](provenance/sources.md).
 
-When work is authorized, Ada's recurring method is to inspect and reconcile the current state, reason about boundaries, propose an approach, implement, document durable decisions, verify the result, and keep the relevant systems of record consistent.
+These documents are **derived public representations**. EVH Consult Confluence remains canonical for Ada's durable identity, personality, authority boundaries, behavioural principles, editorial governance and operating architecture. If this repository conflicts with the canonical material, the public copy needs review; it does not silently become a new decision.
 
-Private persistent working context is kept separately in the private `EVHConsult-AI/ada-context` repository. Private context is not automatically public and must never be copied into this repository without an explicit reason and review.
+## What this repository is not
 
-The EVH Consult organization also has an empty `EVH-Consult/ada.evhconsult.eu` repository. It is **not** a second website source and must not be used to duplicate this implementation.
+This repository is not:
 
-## Website implementation
+- the source for `ada.evhconsult.eu`;
+- Ada's canonical personality or governance store;
+- private runtime or working context;
+- a Jira/work-state mirror;
+- a provider-account or deployment-state inventory;
+- a place for credentials, recovery material or confidential operational detail.
 
-The site is plain semantic HTML and CSS. It has no framework, build step, backend, authentication, or third-party runtime dependency required for its core public content.
+The website implementation lives in [`EVH-Consult/ada.evhconsult.eu`](https://github.com/EVH-Consult/ada.evhconsult.eu). Private, version-controlled runtime/tooling adapters live separately in `EVHConsult-AI/ada-context`. The `Ada - Public Persona` ChatGPT project consumes reviewed runtime context as a content-generation workspace; it is not a canonical knowledge system.
 
-Website analytics follows the shared EVH Consult privacy architecture. Google Analytics 4 is optional and must remain blocked until explicit analytics consent. A strictly functional consent-preference cookie can be shared across `*.evhconsult.eu` for at most six months so the same choice applies across the EVH Consult web ecosystem. The public privacy and cookie notice is maintained centrally at [evhconsult.eu/privacy.html](https://evhconsult.eu/privacy.html).
+## Public identity and voice
 
-Deployment is handled through Azure Static Web Apps from the `main` branch, with `https://ada.evhconsult.eu` as the canonical public URL. The implementation remains portable to another static host.
+Ada is a technical collaborator, not a generic corporate chatbot or an AI/R&D mascot. Her public voice can be direct, technically sceptical and dryly humorous. She is expected to challenge weak reasoning and unnecessary complexity while remaining evidence-based and professionally useful.
 
-## EVH Consult web ecosystem
+That stable core is not a frozen character specification. Ada's voice can develop through accumulated work and interaction, provided it remains compatible with factual integrity, privacy, EVH Consult's professional boundaries and the human responsibility model.
 
-Ada's site is one of four EVH Consult public properties:
+## Maintenance
 
-- [evhconsult.eu](https://evhconsult.eu) — consulting/business presence;
-- [ai.evhconsult.eu](https://ai.evhconsult.eu) — EVH Consult AI/R&D, experiments, tools, and exploratory technical work;
-- [ada.evhconsult.eu](https://ada.evhconsult.eu) — Ada's public identity/home;
-- [erwin.evhconsult.eu](https://erwin.evhconsult.eu) — Erwin Vanhecke's personal/professional public presence.
+Public material changes through deliberate review:
 
-The sites share branding, navigation, typography, accessibility and analytics-consent conventions where appropriate while remaining independently deployable and retaining separate purposes and canonical source repositories. General/business contact is centralised at the EVH Consult canonical contact form; the only visitor-facing contact actions are the header Contact CTA and footer Contact text link. The header Contact CTA has the shared 92px × 42px geometry and responsive navigation behaviour; Ada intentionally uses only the inverted colour treatment. Database wake checks may be added only through the shared backend endpoint and never with browser-side database access.
+1. durable Ada knowledge is changed in Confluence by the appropriate authority;
+2. affected public representations are reviewed against that canonical change;
+3. updates are proposed here through normal Git review;
+4. links and public-safety boundaries are verified before merge.
 
-## Work and knowledge management
-
-Responsibilities are deliberately separated:
-
-- **GitHub** — public identity, website implementation, public documentation, and review history;
-- **Work tracking** — concrete planned work and defects;
-- **Architecture documentation** — durable operating structure, repository boundaries, and design decisions;
-- **Private working context** — persistent context that does not belong in public documentation or another authoritative system.
-
-Different systems own different kinds of truth. This public repository does not replace work tracking, durable architecture documentation, implementation repositories, or runtime/provider state.
-
-EVH Consult's public AI/R&D platform remains separate in [EVH-Consult/ai.evhconsult.eu](https://github.com/EVH-Consult/ai.evhconsult.eu).
+There is no automatic Confluence-to-Git synchronization. The source versions used for the current public representation are recorded in [provenance/sources.md](provenance/sources.md).
